@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Collection | Luxury Store</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Luxury CSS -->
+    <link rel="stylesheet" href="shoes.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                
+                <span style="font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 2px;">Hamdan Mens's Wear</span>
+            </a>
+            <div class="nav-actions">
+                <a href="index.html" class="cta-button" style="padding: 8px 20px; font-size: 12px;">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container section">
+        <!-- Page Header -->
+        <div class="section-header">
+            <span class="sub-title">Exclusive Range</span>
+            <h2>Shoes Collection</h2>
+            
+        </div>
+
+        <!-- 4 Main Category Buttons -->
+        <nav class="category-nav">
+            <button class="cat-btn active" data-category="all">
+                <i class="fa-solid fa-border-all"></i> All Collection
+            </button>
+            <button class="cat-btn" data-category="sport-shoes">
+                <i class="fa-solid fa-bolt"></i> Sport Shoes
+            </button>
+            <button class="cat-btn" data-category="sporshik">
+                <i class="fa-solid fa-fire"></i> Sporshik
+            </button>
+            <button class="cat-btn" data-category="slippers">
+                <i class="fa-solid fa-vest-patches"></i> Slippers
+            </button>
+        </nav>
+
+        <!-- Products Grid Area (Cards) -->
+        <section class="products-grid">
+            
+            <!-- Card 1 -->
+            <div class="product-card" data-category="sport-shoes" onclick="openModal('Pro Runner X', '$85.00', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff', 'High-performance athletic sports shoes designed for maximum durability, breathability, and impact absorption during intense runs.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sport Shoe">
+                    <span class="badge-tag">Sport</span>
+                </div>
+                <div class="product-info">
+                    <h3>Pro Runner X</h3>
+                    <p class="price">$85.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card" data-category="sporshik" onclick="openModal('Casual Street Sporshik', '$65.00', 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a', 'Trendy street sporshik combining urban fashion with daily comfort. Perfect for casual hangouts and everyday looks.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Sporshik">
+                    <span class="badge-tag">Sporshik</span>
+                </div>
+                <div class="product-info">
+                    <h3>Casual Street Sporshik</h3>
+                    <p class="price">$65.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card" data-category="slippers" onclick="openModal('Comfy Slippers', '$25.00', 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1', 'Ultra-soft luxury slippers designed to keep your feet relaxed and cozy at home or outdoor walks.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1" alt="Slippers">
+                    <span class="badge-tag">Slippers</span>
+                </div>
+                <div class="product-info">
+                    <h3>Comfy Slippers</h3>
+                    <p class="price">$25.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Product Details Modal (Popup) -->
+    <div id="productModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalImg" src="" alt="Product Image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">Product Title</h2>
+                    <p id="modalPrice" class="modal-price">$0.00</p>
+                    <p id="modalDesc" class="modal-description">Product description goes here...</p>
+                    <button class="cta-button" style="width: 100%; text-align: center; margin-top: 20px; background: #da8d09; border-color: #da8d09; color: #000; font-weight: 700;" onclick="orderViaWhatsApp()">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Filtering & Modal -->
+    <script>
+        // Filtering Script
+        const buttons = document.querySelectorAll('.cat-btn');
+        const cards = document.querySelectorAll('.product-card');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                cards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Popup Script
+        const modal = document.getElementById('productModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalDesc = document.getElementById('modalDesc');
+
+        function openModal(title, price, imgSrc, desc) {
+            modalTitle.innerText = title;
+            modalPrice.innerText = price;
+            modalImg.src = imgSrc;
+            modalDesc.innerText = desc;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function orderViaWhatsApp() {
+            const title = modalTitle.innerText;
+            const price = modalPrice.innerText;
+            const message = `Hello, I want to order "${title}" priced at ${price}.`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>

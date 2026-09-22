@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories Collection | Luxury Store</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Luxury CSS (نفس ملف الـ CSS اللي استعملناه للصفحة السابقة) -->
+    <link rel="stylesheet" href="accessories.css">
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <i class="fa-solid fa-gem" style="font-size: 24px; color: #da8d09; margin-right: 10px;"></i>
+                <span style="font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 2px;">LUXE ACCESSORIES</span>
+            </a>
+            <div class="nav-actions">
+                <a href="index.html" class="cta-button" style="padding: 8px 20px; font-size: 12px;">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container section">
+        <!-- Page Header -->
+        <div class="section-header">
+            <span class="sub-title">Exclusive Range</span>
+            <h2>Accessories Collection</h2>
+            <p style="color: #a1a1aa; font-size: 15px; margin-top: -10px;">Elevate your style with our premium luxury accessories.</p>
+        </div>
+
+        <!-- 6 Main Category Buttons (All, Perfume, Glasses, Watch, Bag, Belt) -->
+        <nav class="category-nav">
+            <button class="cat-btn active" data-category="all">
+                <i class="fa-solid fa-border-all"></i> All
+            </button>
+            <button class="cat-btn" data-category="perfume">
+                <i class="fa-solid fa-spray-can-sparkles"></i> Perfume
+            </button>
+            <button class="cat-btn" data-category="glasses">
+                <i class="fa-solid fa-glasses"></i> Glasses
+            </button>
+            <button class="cat-btn" data-category="watch">
+                <i class="fa-solid fa-clock"></i> Watch
+            </button>
+            <button class="cat-btn" data-category="bag">
+                <i class="fa-solid fa-bag-shopping"></i> Bag
+            </button>
+            <button class="cat-btn" data-category="belt">
+                <i class="fa-solid fa-ring"></i> Belt
+            </button>
+        </nav>
+
+        <!-- Products Grid Area (Cards) -->
+        <section class="products-grid">
+            
+            <!-- Card 1: Perfume -->
+            <div class="product-card" data-category="perfume" onclick="openModal('Royal Oud Perfume', '$120.00', 'https://images.unsplash.com/photo-1523293182086-7651a899d37f', 'An exquisite blend of rich oriental oud and amber, designed for long-lasting allure and elegance.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f" alt="Perfume">
+                    <span class="badge-tag">Perfume</span>
+                </div>
+                <div class="product-info">
+                    <h3>Royal Oud Perfume</h3>
+                    <p class="price">$120.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Card 2: Glasses -->
+            <div class="product-card" data-category="glasses" onclick="openModal('Classic Aviator Glasses', '$75.00', 'https://images.unsplash.com/photo-1572635196237-14b3f281503f', 'Premium UV-protected polarized sunglasses featuring a sleek metallic frame for timeless style.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f" alt="Glasses">
+                    <span class="badge-tag">Glasses</span>
+                </div>
+                <div class="product-info">
+                    <h3>Classic Aviator Glasses</h3>
+                    <p class="price">$75.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Card 3: Watch -->
+            <div class="product-card" data-category="watch" onclick="openModal('Chronograph Gold Watch', '$250.00', 'https://images.unsplash.com/photo-1524805444758-089113d48a6d', 'Sophisticated automatic wristwatch crafted with stainless steel and sapphire crystal glass.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d" alt="Watch">
+                    <span class="badge-tag">Watch</span>
+                </div>
+                <div class="product-info">
+                    <h3>Chronograph Gold Watch</h3>
+                    <p class="price">$250.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Card 4: Bag -->
+            <div class="product-card" data-category="bag" onclick="openModal('Leather Executive Bag', '$180.00', 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa', 'Handcrafted genuine leather bag offering spacious compartments and elite professional style.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa" alt="Bag">
+                    <span class="badge-tag">Bag</span>
+                </div>
+                <div class="product-info">
+                    <h3>Leather Executive Bag</h3>
+                    <p class="price">$180.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Card 5: Belt -->
+            <div class="product-card" data-category="belt" onclick="openModal('Signature Leather Belt', '$55.00', 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80', 'Durable pure leather belt equipped with a polished gold-finish buckle for formal and casual wear.')">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80" alt="Belt">
+                    <span class="badge-tag">Belt</span>
+                </div>
+                <div class="product-info">
+                    <h3>Signature Leather Belt</h3>
+                    <p class="price">$55.00</p>
+                    <span class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Product Details Modal (Popup) -->
+    <div id="productModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalImg" src="" alt="Product Image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">Product Title</h2>
+                    <p id="modalPrice" class="modal-price">$0.00</p>
+                    <p id="modalDesc" class="modal-description">Product description goes here...</p>
+                    <button class="cta-button" style="width: 100%; text-align: center; margin-top: 20px; background: #da8d09; border-color: #da8d09; color: #000; font-weight: 700;" onclick="orderViaWhatsApp()">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Filtering & Modal -->
+    <script>
+        // Filtering Script
+        const buttons = document.querySelectorAll('.cat-btn');
+        const cards = document.querySelectorAll('.product-card');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                cards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Popup Script
+        const modal = document.getElementById('productModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalDesc = document.getElementById('modalDesc');
+
+        function openModal(title, price, imgSrc, desc) {
+            modalTitle.innerText = title;
+            modalPrice.innerText = price;
+            modalImg.src = imgSrc;
+            modalDesc.innerText = desc;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function orderViaWhatsApp() {
+            const title = modalTitle.innerText;
+            const price = modalPrice.innerText;
+            const message = `Hello, I want to order the accessory "${title}" priced at ${price}.`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
