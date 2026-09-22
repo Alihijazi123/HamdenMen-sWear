@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamdan Men's Wears | Contact Us</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="logo-container">
+                <img src="./photo_2026-09-21_23-01-56.jpg" alt="Hamdan Men's Wears Logo" class="brand-logo">
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="action-btn search-toggle" id="searchBtn" title="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="action-btn cart-toggle" id="cartBtn" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for shoes, summer wear, accessories...">
+            <button class="close-search" id="closeSearch"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Get in Touch</span>
+                <h2>Visit Or Contact Us</h2>
+            </div>
+            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1000px; margin: 0 auto;">
+                <div class="contact-info-box" style="background: #f8f9fa; padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Hamdan Showroom</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">We would love to welcome you to our store for a personalized styling experience.</p>
+                    <p style="margin-bottom: 10px;"><strong>📍 Address:</strong> Main Street Showroom</p>
+                    <p style="margin-bottom: 10px;"><strong>⏰ Hours:</strong> Open Daily: 10:00 AM – 10:00 PM</p>
+                    <p style="margin-bottom: 20px;"><strong>📱 WhatsApp:</strong> +961 XX XXX XXX</p>
+                    <a href="https://wa.me/961XXXXXXXX" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.2rem;"></i> Chat on WhatsApp</a>
+                </div>
+                <div class="contact-form-box" style="background: #f8f9fa; padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Send a Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" placeholder="Your Name" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; outline: none;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="tel" placeholder="Your Phone / WhatsApp" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; outline: none;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <textarea placeholder="Your Inquiry..." rows="4" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; outline: none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <span class="logo-text" style="font-size: 1.8rem; color: #000;">HAMD<span class="logo-highlight" style="background:#000; color:#fff;">A</span>N</span>
+                <p style="margin-top: 15px; color: #52525b;">Pure minimalist fashion and exquisite tailoring for the elite 2026 wardrobe.</p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/961XXXXXXXX"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p style="color: #52525b; line-height: 1.8;">Main Street Showroom<br>Open Daily: 10:00 AM – 10:00 PM<br>WhatsApp: +961 XX XXX XXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hamdan Men's Wears. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

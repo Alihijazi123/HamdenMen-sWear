@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamdan Men's Wears | Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Updated Logo Container with Image -->
+            <a href="index.html" class="logo-container">
+                <img src="./images/photo_2026-09-21_23-01-56.jpg" alt="Hamdan Men's Wears Logo" class="brand-logo">
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="action-btn search-toggle" id="searchBtn" title="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="action-btn cart-toggle" id="cartBtn" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for shoes, summer wear, accessories...">
+            <button class="close-search" id="closeSearch"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- Hero Section with Custom Store Background -->
+   <section class="hero" id="home" style="background-image: linear-gradient(rgba(221, 206, 206, 0.767) , rgba(0, 0, 0, 0.082) ), url('./background.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-section">
+    <div class="overlay"></div>
+    <div class="content">
+        <span class="badge">HAMDAN Men's WEAR</span>
+        <h1 class="animated-heading">WALK WITH CONFIDENCE</h1>
+        <p class="hero-subtext">
+    <i class="fa-solid fa-fire" style="color: #ff4500; margin-right: 6px;"></i> 
+   Hot Styles. Bold Looks. Delivered All Over Lebanon.
+</p>
+        <a href="./shop.html" class="cta-button">EXPLORE OUR COLLECTION</a>
+    </div>
+</div>
+    </section>
+<!-- Featured Categories Slider Section -->
+<section class="section categories-slider-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="sub-title">Discover</span>
+            <h2>Explore Categories</h2>
+        </div>
+        
+        <!-- Slider Container -->
+        <div class="categories-carousel-wrapper">
+            <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+            
+            <div class="categories-track-container">
+                <div class="categories-track" id="categoriesTrack">
+                    
+                    <!-- Card 1: Summer Collection -->
+                    <a href="shop.html" class="cat-slide-card">
+                        <img src="./images/summercollection.jpg" alt="Summer Collection">
+                        <div class="cat-overlay">
+                            <h3>Summer Collection</h3>
+                            <span class="explore-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Winter Collection -->
+                    <a href="shop.html" class="cat-slide-card">
+                        <img src="./images/wintercollection.jpg" alt="Winter Collection">
+                        <div class="cat-overlay">
+                            <h3>Winter Collection</h3>
+                            <span class="explore-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Shoes -->
+                    <a href="shop.html" class="cat-slide-card">
+                        <img src="./images/shoes.jpg" alt="Shoes">
+                        <div class="cat-overlay">
+                            <h3>Shoes</h3>
+                            <span class="explore-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <!-- Card 3: Shoes -->
+                    <a href="shop.html" class="cat-slide-card">
+                        <img src="./images/OIP.webp" alt="Shoes">
+                        <div class="cat-overlay">
+                            <h3>UnderWear</h3>
+                            <span class="explore-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <!-- Card 4: Accessories (أضفت لك وحدة رابعة إضافية لتكتمل التجربة) -->
+                    <a href="shop.html" class="cat-slide-card">
+                        <img src="./images/accessories.jpg" alt="Accessories">
+                        <div class="cat-overlay">
+                            <h3>Accessories</h3>
+                            <span class="explore-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <!-- Delivery Banner Section -->
+<section class="delivery-banner-section" style="background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%); color: #ffffff; padding: 40px 20px; text-align: center; border-top: 3px solid #d4af37; border-bottom: 3px solid #d4af37; margin: 40px 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; gap: 20px;">
+        
+        <!-- Icon / Visual -->
+        <div style="flex: 1; min-width: 250px; display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <div style="background-color: rgba(212, 175, 55, 0.15); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-truck-fast" style="font-size: 32px; color: #d4af37;"></i>
+            </div>
+            <div style="text-align: left;">
+                <h3 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 1px; color: #ffffff;">FAST DELIVERY</h3>
+                <p style="margin: 5px 0 0 0; color: #a1a1aa; font-size: 14px;">Right to your doorstep</p>
+            </div>
+        </div>
+
+        <!-- Central Text -->
+        <div style="flex: 2; min-width: 280px; text-align: center;">
+            <h2 style="margin: 0; font-size: {clamp(20px, 3vw, 28px)}; font-weight: 800; color: #ffffff; text-transform: uppercase;">
+                🚚 Delivery Available to <span style="color: #d4af37;">All Over Lebanon</span>!
+            </h2>
+            <p style="margin: 8px 0 0 0; color: #d4d4d8; font-size: 15px;">
+                Shop your favorite looks from Hamden Men's Wear and get them delivered safely across every Lebanese region.
+            </p>
+        </div>
+
+        <!-- Action Button / WhatsApp -->
+        <div style="flex: 1; min-width: 220px; display: flex; justify-content: center;">
+            <a href="https://wa.me/96181791288?text=Hello%20Hamdan%20Men's%20Wears,%20I%20want%20to%20order%20with%20delivery!" 
+               target="_blank" 
+               style="background-color: #25d366; color: #ffffff; padding: 12px 24px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: transform 0.3s ease;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Order Now
+            </a>
+        </div>
+
+    </div>
+</section>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="./images/photo_2026-09-21_23-01-56.jpg" alt="Hamdan Logo" style="width: 120px; filter: grayscale(100%);">
+                
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/961XXXXXXXX"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p style="color: #52525b; line-height: 1.8;">Ghazieh | SoutLebanon <br>الغازية-العين<br>Open Daily: 9:00 AM – 8:00 PM<br>WhatsApp: +961 81 791 288</p>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hamdan Men's Wears. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
